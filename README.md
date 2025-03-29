@@ -24,10 +24,10 @@ This script automates the setup of [Ollama](https://ollama.com/), [Go](https://g
 curl -O https://raw.githubusercontent.com/rpriven/ai_setup/refs/heads/main/wsl_ollama_fabric.sh
 
 # Make it executable
-chmod +x setup_ollama_fabric.sh
+chmod +x wsl_ollama_fabric.sh
 
 # Run the script
-./setup_ollama_fabric.sh
+./wsl_ollama_fabric.sh
 ```
 
 ### Method 2: Direct Installation
