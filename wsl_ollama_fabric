@@ -13,6 +13,18 @@
 #  - Streamlit for Fabric UI
 # ====================================================
 
+# Check if running in WSL
+if ! grep -q Microsoft /proc/version; then
+  echo -e "${RED}This script is designed for WSL (Windows Subsystem for Linux).${NC}"
+  echo -e "${RED}It appears you are not running in a WSL environment.${NC}"
+  echo -e "${YELLOW}Continue anyway? (y/n)${NC}"
+  read -r choice
+  if [[ ! "$choice" =~ ^[Yy]$ ]]; then
+    echo "Exiting."
+    exit 1
+  fi
+fi
+
 # Color definitions
 RED='\033[0;31m'
 GREEN='\033[0;32m'
